@@ -1,0 +1,27 @@
+list of links:-
+
+http://css-tricks.com/snippets/css/css-triangle/
+
+http://www.jquery4u.com/json/jsonp-examples/
+
+http://stackoverflow.com/questions/684672/loop-through-javascript-object
+
+http://stackoverflow.com/questions/1946426/html-5-is-it-br-br-or-br
+
+http://stackoverflow.com/questions/547384/where-do-you-include-the-jquery-library-from-google-jsapi-cdn
+
+http://api.jquery.com/add/
+
+http://www.w3schools.com/jsref/jsref_push.asp
+
+http://stackoverflow.com/questions/840781/easiest-way-to-find-duplicate-values-in-a-javascript-array
+
+http://api.jquery.com/prepend/
+
+http://stackoverflow.com/questions/1443233/easier-way-to-get-a-jquery-object-from-appended-element
+
+http://stackoverflow.com/questions/8841516/run-jquery-on-newly-created-elements
+
+http://api.jquery.com/slideToggle/
+
+https://forum.jquery.com/topic/syntax-for-variable-as-selector
