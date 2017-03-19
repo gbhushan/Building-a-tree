@@ -1,0 +1,45 @@
+{
+	"Arizona": {
+		"parent": null,
+		"selected": true
+	},
+	"Phoenix": {
+		"parent": "Arizona",
+		"selected": true
+	},
+	"Tuscon": {
+		"parent": "Arizona",
+		"selected": true
+	},
+	"Northern California": {
+		"parent": null
+	},
+	"San Jose": {
+		"parent": "Northern California"
+	},
+	"San Francisco": {
+		"parent": "Northern California"
+	},
+	"San Mateo": {
+		"parent": "Northern California"
+	},
+	"Las Vegas": {
+		"parent": "Nevada"
+	},
+	"Reno": {
+		"parent": "Nevada"
+	},
+	"Albuquerque": {
+		"parent": "New Mexico"
+	},
+	"Las Cruces": {
+		"parent": "New Mexico"
+	},
+	"Santa Fe": {
+		"parent": "New Mexico"
+	},
+	"Oregon": {
+		"parent": null,
+		"selected": true
+	}
+}
