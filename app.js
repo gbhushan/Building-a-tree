@@ -1,6 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-	debugger;
-	function init() {
+	NS.init = function init() {
 		// 
 		var treeContainers = document.querySelectorAll(".treeContainer");
 		var tcLength = treeContainers.length;
@@ -13,9 +12,10 @@ document.addEventListener('DOMContentLoaded', function() {
 						url: treeContainers[i].getAttribute("storeURL")
 					}
 				});
-				tc.init();
+				// recommended: keep the appendChild / modification of DOM outside of the creation of treecheckbox
+				tc.initComponent();
 			}
 		}
 	}
-	init();
+	NS.init();
 });

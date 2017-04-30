@@ -1,16 +1,9 @@
 var TreeCheckbox = function(options) {
 	var me = this;
-	// this.addEventListener("click", onClick);
-	if (!options.store) {
-		throw "Store not defined for this component";
-	}
-	this.store = options.store;
-	if (!options.container) {
-		throw "No container defined";
-	}
-	this.container = options.container;
 
-	var getData = function getData(info) {
+	var getData = function(info) {
+		// we'll get data from the URL
+		// on success, we'll build an object to suit our needs for the TreeCheckbox
 		if (!info.url) {
 			throw "URL not defined";
 		}
@@ -22,8 +15,6 @@ var TreeCheckbox = function(options) {
 			if (request.status >= 200 && request.status < 400) {
 				// Success!
 				var response = JSON.parse(request.responseText);
-				// console.log(arguments);
-				// debugger;
 				var locations = [],
 					state,
 					obj,
@@ -61,7 +52,6 @@ var TreeCheckbox = function(options) {
 					}
 				}
 				buildTreeDom(locations);
-				debugger;
 			} else {
 				// We reached our target server, but it returned an error
 
@@ -75,22 +65,26 @@ var TreeCheckbox = function(options) {
 		request.send();
 	}
 
-	var init = function init() {
-		// var treeContainer = options.container;
+	var initComponent = function() {
+		// in the init component we set up the properties of the component
+		/*if (!options.store) {
+			throw "Store not defined for this component";
+		}
+		me.store = options.store;
+		if (!options.container) {
+			throw "No container defined";
+		}
+		me.container = options.container;*/
 		getData(options.store);
 	}
 
-	function onClick() {
-		debugger;
-	}
+	// function onClick() {
+	// 	debugger;
+	// }
 
-	var buildTreeDom = function buildTreeDom(data) {
-		// var ulItem = document.createElement("ul");
-		// var liItem = document.createElement("li");
-		// var divContainer = document.createElement("div");
-		var divContainer = options.container;
+	var buildTreeDom = function(data) {
+		var divContainer = document.createElement("div");
 		var stateDivBox = document.createElement("div");
-		// var cityDivBox = document.createElement("div");
 		var len = data.length;
 		for (var i = 0; i < len; i += 1) {
 			if (data[i]) {
@@ -111,12 +105,9 @@ var TreeCheckbox = function(options) {
 			}
 			divContainer.appendChild(stateDivBox);
 		}
-		// debugger;
-		document.body.appendChild(divContainer);
+		options.container.appendChild(divContainer);
 	}
-	// init();
-	return {
-		init: init,
-	// onClick: onClick
-	};
+	// return {
+	// 	initComponent: initComponent
+	// };
 };
